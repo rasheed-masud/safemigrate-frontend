@@ -61,7 +61,7 @@ export default function Home() {
 
         <div className="flex items-center gap-3">
           {isSignedIn ? (
-            <UserButton afterSignOutUrl="/" />
+             <UserButton />
           ) : (
             <>
               <SignInButton mode="modal">
