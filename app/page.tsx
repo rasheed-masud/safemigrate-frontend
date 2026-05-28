@@ -25,7 +25,8 @@ export default function Home() {
     setAnalyzed(false);
     
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
+      // LIVE CLOUD URL: Pointing to your Hugging Face backend!
+      const response = await fetch("https://rasheed-masud-safemigrate-api.hf.space/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // LAUNCH MODE: Explicitly telling the backend to give the full Pro features for free
