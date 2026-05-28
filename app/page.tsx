@@ -79,11 +79,11 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Main Workspace (Split Pane) */}
-      <div className="flex-1 flex overflow-hidden">
+      {/* Main Workspace - Responsive: Stacks on Mobile, Side-by-Side on Desktop */}
+      <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
         
         {/* Left Pane: Input Editor */}
-        <div className="w-1/2 flex flex-col border-r border-zinc-800">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col border-b md:border-b-0 md:border-r border-zinc-800">
           <div className="h-10 flex items-center justify-between px-4 border-b border-zinc-800 bg-zinc-900/50 shrink-0">
             <span className="text-xs text-zinc-500 font-mono">migration.sql</span>
             
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
 
         {/* Right Pane: Output Results */}
-        <div className="w-1/2 flex flex-col bg-zinc-950">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col bg-zinc-950">
           <div className="h-10 flex items-center px-4 border-b border-zinc-800 bg-zinc-900/50 shrink-0">
             <span className="text-xs text-zinc-500 font-mono">analysis_output</span>
             {analyzed && warnings.length > 0 && (
